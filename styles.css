@@ -1,0 +1,169 @@
+@font-face {
+font-family: 'WixMadeforDisplay-VariableFont';
+src: url('WixMadeforDisplay-VariableFont_wght.ttf')
+}
+body {
+margin: 0;
+padding: 0;
+font-family: 'WixMadeforDisplay-VariableFont';
+}
+/* Header styles */
+header {
+background-color: #000000;
+font-family: 'WixMadeforDisplay-VariableFont';
+color: #ffffff;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+z-index: 10;
+}
+.header-container {
+display: flex;
+justify-content: space-between;
+align-items: center;
+position: relative;
+height: 100%;
+}
+/* Navigation links */
+nav {
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+nav a {
+position: relative;
+margin: 0 0px;
+padding: 10px 20px;
+color: #ffffff;
+text-decoration: none;
+font-weight: bold;
+font-size: 21px;
+}
+nav a::before, nav a:hover::before {
+content: '';
+display: inline-block;
+position: absolute;
+bottom: 0;
+left: 0;
+width: 0;
+height: 4px;
+background-color: #002fff; /* 46b2ff#1017a7*/
+}
+nav :not(.active):hover::before {
+width: calc(100% - 6px);
+margin: 0 3px;
+background-color: #002fffa9; /* Change this color for the hover line */
+}
+nav a.active::before {
+position: absolute;
+width: calc(100% - 6px);
+margin: 0 3px;
+right: auto;
+}
+/* Logo */
+#logo {
+width: 10%;
+transition: size 0.5s;
+transition: background-color 0.3s ease;
+cursor: pointer;
+}
+#logo:hover {
+transform: scale(1.1);
+}
+.logo-link {
+display: inline-block;
+text-decoration: none;
+}
+/* Section styles */
+section {
+padding: 100px 0;
+}
+section h2 {
+font-size: 2em;
+margin-bottom: 40px;
+text-align: center;
+}
+section p {
+font-size: 1.2em;
+line-height: 1.6;
+max-width: 800px;
+margin: 0 auto;
+text-align: justify;
+}
+
+#signin-container {
+    background-image: url('Pictures/membership_button.jpg');
+}
+#signin-link {
+    text-decoration: none;  /* Optional: This will remove the underline from the link */
+    color: rgb(0, 0, 0);  /* Change the color of the text to ensure it is visible against your background image */
+}
+.signin-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: blue;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Banner styles */
+.banner {
+position: relative;
+height: calc(78vh - var(--header-height, 80px));
+margin-top: var(--header-height, 80px);
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+text-align: center;
+background-image: url('Pictures/background.jpg'); /* Replace with your image path */
+background-size: cover; /* This will make sure the image covers the whole element */
+background-position: center;
+}
+.banner h1 {
+font-size: 4em;
+margin: 0;
+text-align: center;
+margin-bottom: 10px;
+}
+.banner h2 {
+font-size: 3em;
+margin: 0;
+text-align: center;
+}
+/* Image and text layout */
+.image-text-container {
+display: flex;
+align-items: flex-start;
+}
+.image-text-container img {
+width: 300px; /* Adjust the width as needed */
+margin-right: 20px; /* Adjust the spacing between the image and text */
+margin-top: 40px; /* Adjust as needed for more or less space */
+}
+.content-wrapper {
+max-width: 800px; /* Adjust as needed, this should match the width of your text blocks */
+margin: 0 auto; /* This centers the content-wrapper */
+}
+/* Center the image to the left */
+.image-text-container p {
+text-align: justify;
+margin-top: 40px; /* Adjust as needed for more or less space */
+}
+/* Footer styles */
+footer {
+background-color: #000000;
+padding: 20px 0;
+color: #fff;
+text-align: center;
+}
+footer p {
+margin: 0;
+font-size: 1.2em;
+}
