@@ -90,3 +90,18 @@ window.addEventListener('DOMContentLoaded', (event) => {
         }
     });
 });
+document.addEventListener('DOMContentLoaded', (event) => {
+    // Select the Events link
+    const eventsLink = document.querySelector('nav a[href="events.html"]');
+
+    // Add click event listener if the link exists
+    if (eventsLink) {
+        eventsLink.addEventListener('click', function(event) {
+            // Optional: Any specific logic you want to execute before redirection
+            // event.preventDefault(); // Uncomment this line only if you have additional logic to execute before redirection
+
+            // Redirect to the events page
+            window.location.href = this.getAttribute('href');
+        });
+    }
+});

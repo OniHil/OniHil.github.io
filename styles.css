@@ -167,3 +167,39 @@ footer p {
 margin: 0;
 font-size: 1.2em;
 }
+
+.event-images {
+    display: flex;
+    justify-content: center; /* Centers children horizontally */
+    align-items: center; /* Centers children vertically (if you have varying image heights) */
+    flex-wrap: wrap; /* Allows images to wrap onto the next line */
+    gap: 10px; /* Optional: Adds some space between the images */
+}
+
+.event-images img {
+    max-width: 25%; /* Ensures images are responsive and do not overflow their container */
+    height: auto; /* Maintains aspect ratio */
+}
+
+.event-details h2 {
+    margin-bottom: 10px; /* Adjusts the space between the title and the date */
+    text-align: center; /* Centers the title if desired */
+}
+
+.event-details .event-date {
+    margin-top: 0;
+    margin-bottom: 20px; /* Adjusts the space between the date and the description */
+    text-align: center; /* Centers the date if desired */
+    font-size: 1.5em; /* Adjusts the size of the date text if needed */
+}
+
+.event-description {
+    margin-bottom: 125px; /* Adjust this value to achieve the desired spacing */
+}
+
+section h1 {
+    text-align: center; /* Centers the title text */
+    font-size: 64px; /* Increases the font size, adjust as needed */
+    margin-top: 50px; /* Adds space above the title, adjust as needed */
+    margin-bottom: 50px; /* Adds space below the title, adjust as needed */
+}
