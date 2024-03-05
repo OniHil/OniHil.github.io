@@ -105,3 +105,52 @@ document.addEventListener('DOMContentLoaded', (event) => {
         });
     }
 });
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    // Scope your functions inside the DOMContentLoaded callback to not pollute the global namespace
+
+    // Initialize slideshows
+    let slideshows = document.querySelectorAll('.event-content');
+    slideshows.forEach(slideshow => {
+        initializeSlideshow(slideshow);
+    });
+
+    // Function to initialize a slideshow
+    function initializeSlideshow(slideshowContainer) {
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Function to show the current slide
+        function showSlides(n) {
+            let slides = slideshowContainer.getElementsByClassName("mySlides");
+            let dots = slideshowContainer.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1; }
+            if (n < 1) { slideIndex = slides.length; }
+            Array.from(slides).forEach(slide => slide.style.display = "none");
+            Array.from(dots).forEach(dot => dot.className = dot.className.replace(" active", ""));
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+
+        // Function to increment/decrement the current slide index
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        // Function to set the current slide index to a specific dot
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        // Attach event listeners for 'prev' and 'next' buttons
+        slideshowContainer.querySelector(".prev").addEventListener('click', () => plusSlides(-1));
+        slideshowContainer.querySelector(".next").addEventListener('click', () => plusSlides(1));
+
+        // Attach event listeners for each 'dot'
+        Array.from(slideshowContainer.querySelectorAll(".dot")).forEach((dot, index) => {
+            dot.addEventListener('click', () => currentSlide(index + 1));
+        });
+    }
+});
+
+
