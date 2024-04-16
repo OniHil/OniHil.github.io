@@ -2,6 +2,13 @@ window.addEventListener('DOMContentLoaded', (event) => {
     const body = document.querySelector('body');
     let scrollingToTop = false;  // Add this flag variable
 
+    if (window.location.pathname.endsWith('events.html') || window.location.pathname.includes('events.html')) {
+        document.getElementById('logo').addEventListener('click', function(e) {
+            e.preventDefault(); // Prevent default action
+            window.location.href = 'index.html'; // Navigate to 'index.html'
+        });
+    }
+
     document.getElementById('logo').addEventListener('click', function(e) {
         e.preventDefault();
 
