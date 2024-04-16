@@ -7,19 +7,19 @@ window.addEventListener('DOMContentLoaded', (event) => {
             e.preventDefault(); // Prevent default action
             window.location.href = 'index.html'; // Navigate to 'index.html'
         });
+    } else {
+        document.getElementById('logo').addEventListener('click', function(e) {
+            e.preventDefault();
+    
+            scrollActionInProgress = true;
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+    
+            // Reset the flag after the scroll duration (adjust the duration as needed)
+            setTimeout(function(e) {
+            scrollActionInProgress = false;
+            }, 200);  // Adjust this value based on your scrolling time
+        });
     }
-
-    document.getElementById('logo').addEventListener('click', function(e) {
-        e.preventDefault();
-
-        scrollActionInProgress = true;
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-
-        // Reset the flag after the scroll duration (adjust the duration as needed)
-        setTimeout(function(e) {
-        scrollActionInProgress = false;
-        }, 200);  // Adjust this value based on your scrolling time
-    });
 
     const header = document.querySelector('header');
     const banner = document.querySelector('.banner');
