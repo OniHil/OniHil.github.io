@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     // Scope your functions inside the DOMContentLoaded callback to not pollute the global namespace
 
     // Initialize slideshows
-    let slideshows = document.querySelectorAll('.event-content');
+    let slideshows = document.querySelectorAll('.event-slideshow');
     slideshows.forEach(slideshow => {
         initializeSlideshow(slideshow);
     });
