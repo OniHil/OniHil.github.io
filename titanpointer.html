@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="puzzle.css">
+  <title>Symmetric State Diagram - Lines Only</title>
+  <style>
+    /* === Styles for State Diagram Puzzle === */
+
+    svg {
+        background-color: #ffffff;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        display: block;
+        margin: 20px auto;
+    }
+
+    /* Style for the SVG transition lines and paths */
+    svg path,
+    svg line {
+        stroke: black;
+        stroke-width: 1.5;
+        fill: none;
+    }
+
+    /* Style for the state circles (S1, S2, etc.) */
+    svg .state {
+        fill: white;
+        stroke: black;
+        stroke-width: 2;
+    }
+
+    /* Style for the labels inside the state circles */
+    svg .label {
+        font-family: sans-serif;
+        font-size: 14px;
+        font-weight: bold;
+        text-anchor: middle; /* Horizontally center the text */
+        dominant-baseline: middle; /* Vertically center the text */
+    }
+
+    /* Style for the red labels on the transition edges */
+    svg .edge-label {
+        font-family: sans-serif;
+        font-size: 12px;
+        fill: #d9534f; /* A slightly softer red */
+        text-anchor: middle;
+    }
+  </style>
+</head>
+<body>
+
+    <h3>State Diagram - Line only</h3>
+    <p>The following instruction will reveal the next step in hex: <code>556602204413435566441</code>.</p>
+
+    <svg width="800" height="600" viewBox="0 0 800 600">
+
+        <circle class="state" cx="400" cy="300" r="30" /> <text x="400" y="300" class="label">S₁</text>
+
+        <circle class="state" cx="550" cy="200" r="30" /> <text x="550" y="200" class="label">S₂</text>
+
+        <circle class="state" cx="600" cy="300" r="30" /> <text x="600" y="300" class="label">S₃</text>
+
+        <circle class="state" cx="550" cy="400" r="30" /> <text x="550" y="400" class="label">S₄</text>
+
+        <circle class="state" cx="250" cy="200" r="30" /> <text x="250" y="200" class="label">S₅</text>
+
+        <circle class="state" cx="200" cy="300" r="30" /> <text x="200" y="300" class="label">S₆</text>
+
+        <circle class="state" cx="250" cy="400" r="30" /> <text x="250" y="400" class="label">S₇</text>
+
+        <path d="M 421.2 278.8 C 450 240, 350 240, 378.8 278.8" />
+        <text x="400" y="230" class="edge-label">0</text>
+
+        <line x1="425.0" y1="283.4" x2="525.0" y2="216.6" />
+        <text x="470" y="240" class="edge-label">1</text>
+
+        <line x1="430" y1="300" x2="570" y2="300" />
+        <text x="500" y="285" class="edge-label">2</text>
+
+        <line x1="425.0" y1="316.6" x2="525.0" y2="383.4" />
+        <text x="470" y="360" class="edge-label">3</text>
+
+        <line x1="375.0" y1="283.4" x2="275.0" y2="216.6" />
+        <text x="330" y="240" class="edge-label">4</text>
+
+        <line x1="370" y1="300" x2="230" y2="300" />
+        <text x="300" y="285" class="edge-label">5</text>
+
+        <line x1="375.0" y1="316.6" x2="275.0" y2="383.4" />
+        <text x="330" y="360" class="edge-label">6</text>
+
+        <line x1="563.4" y1="226.8" x2="586.6" y2="273.2" />
+        <text x="585" y="245" class="edge-label">3</text>
+
+        <line x1="586.6" y1="326.8" x2="563.4" y2="373.2" />
+        <text x="585" y="355" class="edge-label">4</text>
+
+    </svg>
+
+    <p>The message is clear once the states are determined:
+    S<sub>1</sub> = {E31}, S<sub>2</sub> = E, S<sub>3</sub> = {D31}+{D41}+{D35}, S<sub>4</sub> = {D35}, S<sub>5</sub> = 2^[E31]+[D35], S<sub>6</sub> = 2^[E31], S<sub>7</sub> = C.
+    The {}, [] are the functions extracting dark and light illustration boards.</p>
+
+    <img src="DE.svg" alt="MAP" width="400">
+</body>
+</html>

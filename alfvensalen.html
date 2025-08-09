@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letter Puzzle</title>
+    <link rel="stylesheet" href="puzzle.css">
+    <style>
+        /* Override body layout for this page only */
+        body {
+            text-align: center;
+            max-width: none; /* Removes the width limit from puzzle.css */
+        }
+
+        /* Styles for the letter input boxes */
+        .letter-input {
+            width: 40px;
+            height: 40px;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            text-transform: uppercase;
+            margin: 5px;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            color: white;
+        }
+
+        /* Style for the decrypted message area */
+        #message {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #008000;
+            min-height: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="letter-puzzle-container">
+        <h3>Final Lock</h3>
+        <p>Use the letters you've collected to unlock the final message.</p>
+        <div id="inputContainer">
+            <input maxlength="1" class="letter-input" style="background-color: #ff0000">
+            <input maxlength="1" class="letter-input" style="background-color: #eeee00">
+            <input maxlength="1" class="letter-input" style="background-color: #ff4500">
+            <input maxlength="1" class="letter-input" style="background-color: #8b0000">
+            <input maxlength="1" class="letter-input" style="background-color: #111111">
+            <input maxlength="1" class="letter-input" style="background-color: #008000">
+            <input maxlength="1" class="letter-input" style="background-color: #ff0000">
+            <input maxlength="1" class="letter-input" style="background-color: #DAA520">
+            <input maxlength="1" class="letter-input" style="background-color: #800080">
+        </div>
+
+        <button onclick="checkWord()">Submit</button>
+        <div id="message"></div>
+    </div>
+
+    <script>
+        // Sorry but you have to do it the proper way
+        const encryptedMessage = [0x1b, 0x27, 0x2c, 0x28, 0x20, 0x29, 0x2d, 0x6b, 0x21, 0x24, 0x75, 0x37, 0x23, 0x20, 0x6c, 0x1f, 0x6b, 0x37, 0x3e, 0x3c, 0x2f, 0x2f, 0x2c, 0x22, 0x2e];
+
+        function decryptMessage(encryptedBytes, key) {
+            const keyBytes = [...key].map(c => c.charCodeAt(0));
+            const decrypted = encryptedBytes.map((byte, i) => String.fromCharCode(byte ^ keyBytes[i % keyBytes.length]));
+            return decrypted.join('');
+        }
+
+        function checkWord() {
+            const inputs = document.querySelectorAll('.letter-input');
+            let word = '';
+            inputs.forEach(input => {
+                word += input.value.toUpperCase();
+            });
+
+            if (word.length < inputs.length) {
+                // Optional: handle incomplete input
+                return; 
+            }
+
+            const messageDiv = document.getElementById("message");
+            const decrypted = decryptMessage(encryptedMessage, word);
+            messageDiv.textContent = decrypted;
+        }
+
+        // Auto-focus to next input for better UX
+        document.querySelectorAll('.letter-input').forEach((input, index, arr) => {
+            input.addEventListener('keyup', (event) => {
+                if (event.target.value && index < arr.length - 1) {
+                    arr[index + 1].focus();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
