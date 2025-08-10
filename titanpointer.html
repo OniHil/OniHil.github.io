@@ -6,8 +6,6 @@
   <link rel="stylesheet" href="puzzle.css">
   <title>Symmetric State Diagram - Lines Only</title>
   <style>
-    /* === Styles for State Diagram Puzzle === */
-
     svg {
         background-color: #ffffff;
         border: 1px solid #ddd;
@@ -16,7 +14,6 @@
         margin: 20px auto;
     }
 
-    /* Style for the SVG transition lines and paths */
     svg path,
     svg line {
         stroke: black;
@@ -24,27 +21,24 @@
         fill: none;
     }
 
-    /* Style for the state circles (S1, S2, etc.) */
     svg .state {
         fill: white;
         stroke: black;
         stroke-width: 2;
     }
 
-    /* Style for the labels inside the state circles */
     svg .label {
         font-family: sans-serif;
         font-size: 14px;
         font-weight: bold;
-        text-anchor: middle; /* Horizontally center the text */
-        dominant-baseline: middle; /* Vertically center the text */
+        text-anchor: middle; 
+        dominant-baseline: middle; 
     }
 
-    /* Style for the red labels on the transition edges */
     svg .edge-label {
         font-family: sans-serif;
         font-size: 12px;
-        fill: #d9534f; /* A slightly softer red */
+        fill: #d9534f; 
         text-anchor: middle;
     }
   </style>
@@ -99,10 +93,25 @@
 
     </svg>
 
-    <p>The message is clear once the states are determined:
-    S<sub>1</sub> = {E31}, S<sub>2</sub> = E, S<sub>3</sub> = {D31}+{D41}+{D35}, S<sub>4</sub> = {D35}, S<sub>5</sub> = 2^[E31]+[D35], S<sub>6</sub> = 2^[E31], S<sub>7</sub> = C.
-    The {}, [] are the functions extracting dark and light illustration boards.</p>
+    <h4>State Definitions</h4>
+    <p>The message is clear once the states are determined:</p>
+    <code>
+        S<sub>1</sub> = {E31}<br>
+        S<sub>2</sub> = E<br>
+        S<sub>3</sub> = {D31}+{D41}+{D35}<br>
+        S<sub>4</sub> = {D35}<br>
+        S<sub>5</sub> = 2^[E31]+[D35]<br>
+        S<sub>6</sub> = 2^[E31]<br>
+        S<sub>7</sub> = C
+    </code>
+    
+    <h4>Legend</h4>
+    <ul>
+        <li><code>{}</code>: Extracts the dark illustration boards.</li>
+        <li><code>[]</code>: Extracts the light illustration boards.</li>
+    </ul>
 
     <img src="DE.svg" alt="MAP" width="400">
+    
 </body>
 </html>
