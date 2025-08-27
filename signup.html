@@ -1,62 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Event History - EStER</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/styles.css" />
     <script defer src="script.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <div class="header-container">
-          <img id="logo" src="Pictures/logo.png" alt="logo">
-          <nav>
-            <a href="index.html#AboutUs">About Us</a>
-            <a href="events.html">Events</a>
-            <a href="index.html#Membership">Membership</a>
-            <a href="index.html#ContactUs">Contact Us</a>
-          </nav>
-          <div style="width:10%;"><!-- This empty div will balance the logo --></div>
-
+      <div class="header-container">
+        <img id="logo" src="assets/images/logo.png" alt="logo" />
+        <nav>
+          <a href="index.html#AboutUs">About Us</a>
+          <a href="events.html">Events</a>
+          <a href="index.html#Membership">Membership</a>
+          <a href="index.html#ContactUs">Contact Us</a>
           <div class="social-media-links">
             <a href="https://www.facebook.com/ester.kth" target="_blank">
-              <img src="Pictures/facebook_icon.png" alt="Facebook">
+              <img src="assets/images/facebook_icon.png" alt="Facebook" />
             </a>
             <a href="https://www.instagram.com/ester.kth" target="_blank">
-              <img src="Pictures/instagram_icon.png" alt="Instagram">
+              <img src="assets/images/instagram_icon.png" alt="Instagram" />
             </a>
             <a href="https://www.linkedin.com/company/esterkth" target="_blank">
-              <img src="Pictures/linkedin_icon.png" alt="LinkedIn">
+              <img src="assets/images/linkedin_icon.png" alt="LinkedIn" />
             </a>
             <a href="https://discord.gg/nryDUjJguH" target="_blank">
-              <img src="Pictures/discord_icon.png" alt="Discord">
+              <img src="assets/images/discord_icon.png" alt="Discord" />
             </a>
             <!-- Add other social media links here -->
           </div>
+        </nav>
+        <div class="hamburger">
+          <div></div>
+          <div></div>
+          <div></div>
         </div>
+      </div>
     </header>
-    <main> 
-        <section>
-          <p>
-            Go to <a href="https://ebas.ungaforskare.se/blimedlem/EStER">this page</a> to join our association. 
-            It is completely free and helps us a lot. You will recieve mails about news and upcoming events if you join.
+    <main>
+      <section>
+        <p>
+          Go to
+          <a href="https://ebas.ungaforskare.se/blimedlem/EStER">this page</a>
+          to join our association. It is completely free and helps us a lot. You
+          will recieve mails about news and upcoming events if you join. For our
+          international members we have translated the information you need to
+          submit below.
+        </p>
+        <div>
+          <img
+            src="assets/images/guide1.png"
+            alt="traslation of page 1"
+            style="
+              display: block;
+              margin: 1em auto;
+              max-width: 100%;
+              width: 60ch;
+            "
+          />
 
-            For our international members we have translated the information you need to submit below.
-          </p>
-          <div>
-
-            <img src="Pictures/guide1.png" alt="traslation of page 1" style="display: block; margin: 1em auto; max-width: 100%; width: 60ch;">
-
-            <img src="Pictures/guide2.png" alt="traslation of page 2" style="display: block; margin: 1em auto; max-width: 100%; width: 60ch;">
-
-          </div>
-
-        </section>
-        
-    </main> 
+          <img
+            src="assets/images/guide2.png"
+            alt="traslation of page 2"
+            style="
+              display: block;
+              margin: 1em auto;
+              max-width: 100%;
+              width: 60ch;
+            "
+          />
+        </div>
+      </section>
+    </main>
     <footer>
-        <p>&copy; 2023 EStER. All rights reserved.</p>
+      <p>&copy; 2023 EStER. All rights reserved.</p>
     </footer>
-</body>
+  </body>
 </html>
