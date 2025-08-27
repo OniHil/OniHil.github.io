@@ -11,17 +11,17 @@ header {
 
 .header-container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   position: relative;
   height: 100%;
-  padding: 0 20px;
+  padding: 0 220px 0 20px;
 }
 
 nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
 }
 
 nav a {
@@ -82,7 +82,6 @@ nav a.active::before {
   transform: translateY(-8px) rotate(-45deg);
 }
 
-
 #logo {
   width: 10%;
   transition: size 0.5s;
@@ -100,11 +99,17 @@ nav a.active::before {
 .social-media-links {
   display: flex;
   align-items: center;
-  gap: 25px;
+  position: absolute;
+  right: 1%;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0px;
 }
 
 .social-media-links img {
-  width: 40px;
+  width: 2.2vw;
+  min-width: 30px;
+  max-width: 40px;
   height: auto;
 }
 
