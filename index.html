@@ -1,40 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EStER - Engineering Students Exploring Research</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/styles.css" />
     <script defer src="script.js"></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
       <div class="header-container">
-        <img id="logo" src="Pictures/logo.png" alt="logo">
+        <img id="logo" src="assets/images/logo.png" alt="logo" />
         <nav>
           <a href="#AboutUs">About Us</a>
           <a href="events.html">Events</a>
           <a href="#Membership">Membership</a>
           <a href="#ContactUs">Contact Us</a>
+          <div class="social-media-links">
+            <a href="https://www.facebook.com/ester.kth" target="_blank">
+              <img src="assets/images/facebook_icon.png" alt="Facebook" />
+            </a>
+            <a href="https://www.instagram.com/ester.kth" target="_blank">
+              <img src="assets/images/instagram_icon.png" alt="Instagram" />
+            </a>
+            <a href="https://www.linkedin.com/company/esterkth" target="_blank">
+              <img src="assets/images/linkedin_icon.png" alt="LinkedIn" />
+            </a>
+            <a href="https://discord.gg/nryDUjJguH" target="_blank">
+              <img src="assets/images/discord_icon.png" alt="Discord" />
+            </a>
+            <!-- Add other social media links here -->
+          </div>
         </nav>
-        <div style="width:10%;"><!-- This empty div will balance the logo --></div>
-
-        <div class="social-media-links">
-          <a href="https://www.facebook.com/ester.kth" target="_blank">
-            <img src="Pictures/facebook_icon.png" alt="Facebook">
-          </a> 
-          <a href="https://www.instagram.com/ester.kth" target="_blank">
-            <img src="Pictures/instagram_icon.png" alt="Instagram">
-          </a>
-          <a href="https://www.linkedin.com/company/esterkth" target="_blank">
-            <img src="Pictures/linkedin_icon.png" alt="LinkedIn">
-          </a>
-          <a href="https://discord.gg/nryDUjJguH" target="_blank">
-            <img src="Pictures/discord_icon.png" alt="Discord">
-          </a>
-          <!-- Add other social media links here -->
+        <div class="hamburger">
+          <div></div>
+          <div></div>
+          <div></div>
         </div>
       </div>
     </header>
@@ -44,24 +49,43 @@
         <h2>with EStER</h2>
       </section>
       <section id="AboutUs">
-        <h2>Learn, Connect, and Grow</h2> 
+        <h2>Learn, Connect, and Grow</h2>
         <div class="content-wrapper">
-          <p> Engineering Students Exploring Research (EStER) aims to create a community for students interested in research and to make it easier for students to contribute to research and prepare for a future career in research. </p>
+          <p>
+            Engineering Students Exploring Research (EStER) aims to create a
+            community for students interested in research and to make it easier
+            for students to contribute to research and prepare for a future
+            career in research.
+          </p>
           <div class="image-text-container">
             <div>
-              <img src="Pictures/lunchlecture.jpg" alt="AboutUsImage">
+              <img src="assets/images/lunchlecture.jpg" alt="AboutUsImage" />
             </div>
             <div>
-              <p> Forgot your lunch at home? No worries! The lunch lectures we organize do not only save you from spending precious CSN-money, but gives you opportunities to be inspired by the exciting works of doctoral students and researchers. 
-                Ever wondered what a doctoral student does? Or had that really specific research question that both Google and ChatGPT failed to answer? Now's your time to ask! </p>
+              <p>
+                Forgot your lunch at home? No worries! The lunch lectures we
+                organize do not only save you from spending precious CSN-money,
+                but gives you opportunities to be inspired by the exciting works
+                of doctoral students and researchers. Ever wondered what a
+                doctoral student does? Or had that really specific research
+                question that both Google and ChatGPT failed to answer? Now's
+                your time to ask!
+              </p>
             </div>
           </div>
           <div class="image-text-container">
             <div>
-              <img src="Pictures/studytrip.jpg" alt="AboutUsImage2">
+              <img src="assets/images/studytrip.jpg" alt="AboutUsImage2" />
             </div>
             <div>
-              <p> Through study trips we explore beyond the lecture halls, where theory meets practice. Meet the team of scientists behind the experiments you've only seen posters of. These are great opportunities to connect with peers and experts with similar interests. Maybe we could visit your dream workplace next? As always: the sky (i.e. the budget) is the limit! </p>
+              <p>
+                Through study trips we explore beyond the lecture halls, where
+                theory meets practice. Meet the team of scientists behind the
+                experiments you've only seen posters of. These are great
+                opportunities to connect with peers and experts with similar
+                interests. Maybe we could visit your dream workplace next? As
+                always: the sky (i.e. the budget) is the limit!
+              </p>
             </div>
           </div>
         </div>
@@ -69,64 +93,138 @@
       <section id="Membership">
         <h2>Embark on your Research Journey!</h2>
         <div class="content-wrapper">
-          <div style="text-align: center;">
-            <img src="Pictures/membership_blurred.jpg" alt="MembershipImage" style="display: block; margin: 0 auto; height: auto; width: 640px">
+          <div style="text-align: center">
+            <img
+              src="assets/images/membership_blurred.jpg"
+              alt="MembershipImage"
+              style="display: block; margin: 0 auto; height: auto; width: 640px"
+            />
           </div>
           <p>
-            <br>Are you interested in research? Do you want to learn more about how to conduct research, how to research as a student, or how to become a doctoral student? Then you have come to the right place! You can sign up through the link below to become a member. The association is open to all students at KTH. See you soon!</p>
-            <div id="signin-container" style="text-align: center; margin-top: 20px;">
-              <a href="https://ebas.ungaforskare.se/blimedlem/EStER" 
-                class="join-button">I want to join!</a>
-            </div>
+            <br />Are you interested in research? Do you want to learn more
+            about how to conduct research, how to research as a student, or how
+            to become a doctoral student? Then you have come to the right place!
+            You can sign up through the link below to become a member. The
+            association is open to all students at KTH. See you soon!
+          </p>
+          <div
+            id="signin-container"
+            style="text-align: center; margin-top: 20px"
+          >
+            <a
+              href="https://ebas.ungaforskare.se/blimedlem/EStER"
+              class="join-button"
+              >I want to join!</a
+            >
+          </div>
         </div>
       </section>
       <section id="ContactUs">
         <h2>Contact Information</h2>
         <div class="content-wrapper">
-          <p>If you have any questions, suggestions, or would like to collaborate with us, please don't hesitate to reach out. We would love to hear from you! You can contact us through our email: <strong>board.ester [at] gmail.com</strong>, or reach out to one of our board members:<br></p>
+          <p>
+            If you have any questions, suggestions, or would like to collaborate
+            with us, please don't hesitate to reach out. We would love to hear
+            from you! You can contact us through our email:
+            <strong>board.ester [at] gmail.com</strong>, or reach out to one of
+            our board members:<br />
+          </p>
           <div class="image-text-container">
             <div>
-              <img src="Pictures/profilepic_tor.png" alt="AboutUsImage" style="width: 150px;">
+              <img
+                src="assets/images/profilepic_tor.png"
+                alt="AboutUsImage"
+                style="width: 150px"
+              />
             </div>
             <div>
-              <p style="margin-bottom: 7px;"> Tor Ljungberger &mdash; President &mdash; torlj [at] kth.se </p>
-              <p style="margin-top: 0;"> Wanting to learn more about current research than the occasional tidbits given by lecturers at KTH, I became one of the co-founders of EStER. As the current president of the organisation, I coordinate planning of events and am responsible for the vision of the organisation. </p>
+              <p style="margin-bottom: 7px">
+                Tor Ljungberger &mdash; President &mdash; torlj [at] kth.se
+              </p>
+              <p style="margin-top: 0">
+                Wanting to learn more about current research than the occasional
+                tidbits given by lecturers at KTH, I became one of the
+                co-founders of EStER. As the current president of the
+                organisation, I coordinate planning of events and am responsible
+                for the vision of the organisation.
+              </p>
             </div>
           </div>
           <div class="image-text-container">
             <div>
-              <img src="Pictures/profilepic_nadil.png" alt="AboutUsImage" style="width: 150px;">
+              <img
+                src="assets/images/profilepic_nadil.png"
+                alt="AboutUsImage"
+                style="width: 150px"
+              />
             </div>
             <div>
-              <p style="margin-bottom: 7px;"> Nadil Lemmini &mdash; Vice-president &mdash;  nadil [at] kth.se </p>
-              <p style="margin-top: 0;"> Discovering a group of students passionate about my interests made cofounding EStER an obvious choice for me. As Vice-president, I focus on streamlining our workshops and coordinating projects that resonate with our collective goal of spreading our passion for research.</p>
+              <p style="margin-bottom: 7px">
+                Nadil Lemmini &mdash; Vice-president &mdash; nadil [at] kth.se
+              </p>
+              <p style="margin-top: 0">
+                Discovering a group of students passionate about my interests
+                made cofounding EStER an obvious choice for me. As
+                Vice-president, I focus on streamlining our workshops and
+                coordinating projects that resonate with our collective goal of
+                spreading our passion for research.
+              </p>
             </div>
           </div>
           <div class="image-text-container">
             <div>
-              <img src="Pictures/profilepic_mikael.png" alt="AboutUsImage" style="width: 150px;">
+              <img
+                src="assets/images/profilepic_mikael.png"
+                alt="AboutUsImage"
+                style="width: 150px"
+              />
             </div>
             <div>
-              <p style="margin-bottom: 7px;"> Mikael Kemstedt &mdash; Treasurer &mdash;  kemstedt [at] kth.se </p>
-              <p style="margin-top: 0;"> Interested in doing a PhD and keen to learn about research in general, I found this organization to be a good fit. As the treasurer, my primary focus is on managing the financial aspects, ensuring the stability and sustainability of our initiatives that aim to explore and promote diverse areas of research.</p>
+              <p style="margin-bottom: 7px">
+                Mikael Kemstedt &mdash; Treasurer &mdash; kemstedt [at] kth.se
+              </p>
+              <p style="margin-top: 0">
+                Interested in doing a PhD and keen to learn about research in
+                general, I found this organization to be a good fit. As the
+                treasurer, my primary focus is on managing the financial
+                aspects, ensuring the stability and sustainability of our
+                initiatives that aim to explore and promote diverse areas of
+                research.
+              </p>
             </div>
           </div>
           <div class="image-text-container">
             <div>
-              <img src="Pictures/profilepic_wilhelm.png" alt="AboutUsImage" style="width: 150px;">
+              <img
+                src="assets/images/profilepic_wilhelm.png"
+                alt="AboutUsImage"
+                style="width: 150px"
+              />
             </div>
             <div>
-              <p style="margin-bottom: 7px;"> Wilhelm Carmevik &mdash; PR responsible &mdash;  carmevik [at] kth.se </p>
-              <p style="margin-top: 0;"> I became a board member because I am very interested in research and want to help people explore this fascinating world. As PR responsible, I am responsible for advertising our events to our members and the public and creating graphical design for the organization.
+              <p style="margin-bottom: 7px">
+                Wilhelm Carmevik &mdash; PR responsible &mdash; carmevik [at]
+                kth.se
+              </p>
+              <p style="margin-top: 0">
+                I became a board member because I am very interested in research
+                and want to help people explore this fascinating world. As PR
+                responsible, I am responsible for advertising our events to our
+                members and the public and creating graphical design for the
+                organization.
               </p>
             </div>
           </div>
         </div>
-        <p><br>Thank you for visiting our website! We wish you success in your research endeavors and look forward to engaging with you as we work together to inspire students.</p>
+        <p>
+          <br />Thank you for visiting our website! We wish you success in your
+          research endeavors and look forward to engaging with you as we work
+          together to inspire students.
+        </p>
       </section>
     </main>
     <footer>
-       <p>&copy; 2025 EStER. All rights reserved.</p>
+      <p>&copy; 2025 EStER. All rights reserved.</p>
     </footer>
   </body>
 </html>

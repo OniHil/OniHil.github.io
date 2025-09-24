@@ -1,0 +1,62 @@
+
+#signin-container {
+  background-image: url("../assets/images/membership_button.jpg");
+}
+
+#signin-link {
+  text-decoration: none; /* Optional: This will remove the underline from the link */
+  color: rgb(
+    0,
+    0,
+    0
+  ); /* Change the color of the text to ensure it is visible against your background image */
+}
+
+.signin-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: blue;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+}
+
+.join-button {
+  margin-top: 20px;
+  display: inline-block;
+  padding: 18px 40px;
+  background-color: #002fff;
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.join-button:hover {
+  transform: scale(1.05);
+}
+
+.join-button {
+  margin-top: 20px;
+  display: inline-block;
+  padding: 18px 40px; /* bigger padding = bigger button */
+  background-color: #002fff; /* bright standout color (orange/red) */
+  color: white;
+  font-size: 22px; /* larger text */
+  font-weight: bold; /* makes it pop */
+  text-decoration: none;
+  border-radius: 12px; /* rounder edges */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); /* shadow to "lift" it */
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.join-button:hover {
+  /*background-color: #ffffff;      /* darker hover color */
+  transform: scale(1.05); /* slight zoom effect */
+}
